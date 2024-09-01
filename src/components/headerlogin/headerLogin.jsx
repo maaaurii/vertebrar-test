@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './headerLogin.module.css'; // Importa el CSS si lo necesitas
 
 export const HeaderLogin = () => {
