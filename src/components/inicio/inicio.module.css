@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    padding: 2vw; /* Responsive padding using viewport width units */
+}
+
+/* Centered div styling */
+.div {
+    background-color: rgba(0, 0, 0, 0.749); /* Gray with 74.9% opacity */
+    padding: 1vw 10vw 0; /* Responsive padding using viewport width units */
+    border-radius: 0.5rem; /* Optional: rounded corners */
+    text-align: center; /* Center text inside the div */
+    max-width: 90vw; /* Limit width to 90% of viewport width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Heading and link styling */
+.h2 {
+    color: white;
+    font-size: 2rem; /* Responsive font size using rem units */
+    margin: 0;
+}
+
+.h4 {
+    margin: 1.5rem; /* Responsive margin using rem units */
+    color: white;
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem; /* Padding using rem units */
+    font-size: 1.2rem; /* Font size using rem units */
+    background-color: #c700d4;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block; /* Ensure the link behaves as a block-level element for padding */
+    max-width: 90%; /* Limit the button width to 90% of its container */
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+}
+
+.a:hover {
+    background-color: #75007d;
+}

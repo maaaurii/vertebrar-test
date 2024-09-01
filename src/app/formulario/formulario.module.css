@@ -1,0 +1,91 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2vw;
+}
+
+/* Login container styling */
+.loginContainer {
+    background-color: white;
+    padding: 2.4rem 1.5rem 2rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 455px;
+    width: 100%;
+    text-align: center;
+}
+
+.h2 {
+    font-size: 2rem;
+    color: #c700d4;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    color: #c700d4;
+    font-weight: bold;
+}
+
+/* Styles for password-wrapper */
+.passwordWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.passwordWrapperbutton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555;
+    margin-bottom: 0.5rem;
+    margin-left: 20.6rem;
+}
+
+.icon {
+    height: 15px;
+    padding-top: 5px;
+}
+
+.input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: calc(100% - 40px); /* Adjust width to fit with the button */
+}
+
+
+
+.button {
+    padding: 0.75rem;
+    border: 2px solid #c700d4; /* Border color matching the theme */
+    background-color: #c700d4;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1rem; /* More rounded corners */
+    cursor: pointer;
+    width: 97%; /* Full width */
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.button:hover {
+    background-color: #75007d;
+    border-color: #75007d;;
+}
+
+
+
+
