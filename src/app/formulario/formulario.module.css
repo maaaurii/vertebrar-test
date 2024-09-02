@@ -10,25 +10,25 @@
 /* Login container styling */
 .loginContainer {
     background-color: white;
-    padding: 2rem; /* Ajusta el padding para que se vea bien en móviles */
+    padding: 2.4rem 1.5rem 2rem 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    max-width: 455px;
     width: 100%;
     text-align: center;
 }
 
 .h2 {
-    font-size: 1.75rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    font-size: 2rem;
     color: #c700d4;
-    margin-bottom: 1.5rem; /* Ajusta el margen para una mejor separación */
-    margin-top: 0;
+    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Asegura que los elementos llenen el contenedor */
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -36,14 +36,13 @@
     margin-bottom: 0.5rem;
     color: #c700d4;
     font-weight: bold;
-    text-align: left; /* Alinea las etiquetas a la izquierda */
 }
 
 .passwordWrapper {
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative; /* Necesario para posicionar el botón de mostrar/ocultar */
+    position: relative;
 }
 
 .passwordWrapperbutton {
@@ -51,14 +50,12 @@
     background: none;
     cursor: pointer;
     color: #555;
-    position: absolute; /* Posiciona el botón dentro del campo de contraseña */
-    right: 10px; /* Ajusta el espacio desde el borde derecho */
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajusta el alineamiento vertical */
+    margin-bottom: 0.5rem;
+    margin-left: 20.6rem;
 }
 
 .icon {
-    height: 20px; /* Tamaño del icono ajustado */
+    height: 15px;
 }
 
 .input {
@@ -66,7 +63,7 @@
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
-    width: 100%; /* Ajusta el ancho a 100% */
+    width: calc(100% - 40px); /* Adjust width to fit with the button */
 }
 
 .button {
@@ -77,7 +74,7 @@
     font-size: 1rem;
     border-radius: 0.5rem; /* Bordes más redondeados */
     cursor: pointer;
-    width: 100%; /* Ajusta el ancho del botón a 100% */
+    width: 97%; /* Ajusta el ancho del botón a 100% */
     transition: background-color 0.3s, color 0.3s;
     margin-top: 1rem; /* Ajusta el margen superior para separación */
 }
@@ -89,12 +86,34 @@
 
 /* Consulta de medios para pantallas más pequeñas */
 @media (max-width: 767px) {
+
+    .loginContainer {
+        padding: 2rem; /* Ajusta el padding para que se vea bien en móviles */
+        max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    }
+
     .h2 {
         font-size: 1.5rem; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
         margin-bottom: 1rem; /* Ajusta el margen inferior */
+        margin-top: 0;
+    }
+
+    .form {
+        align-items: stretch;
+    }
+
+    .label {
+        text-align: left;
+    }
+
+    .passwordWrapper {
+        position: relative;
     }
 
     .passwordWrapperbutton {
+        position: absolute; /* Posiciona el botón dentro del campo de contraseña */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%);
         right: -6px; /* Mantén el botón alineado a la derecha */
     }
 
@@ -106,8 +125,11 @@
         margin-bottom: 0.75rem; /* Ajusta el margen inferior para pantallas pequeñas */
         width: 93%;
     }
-}
 
+    .button {
+        width: 100%;
+    }
+}
 
 
 
