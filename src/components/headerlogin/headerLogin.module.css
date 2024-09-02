@@ -1,10 +1,11 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; /* Mantén la disposición en fila para pantallas grandes */
+    justify-content: space-between; /* Espacio entre el logo y los enlaces de navegación */
+    align-items: center; /* Centra el contenido verticalmente */
     background-color: white;
     padding: 10px 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -14,13 +15,22 @@
 
 .nav {
     display: flex;
-    gap: 30px;
+    flex-direction: row; /* Mantén la disposición en fila para pantallas grandes */
+    gap: 30px; /* Espacio entre los enlaces en pantallas grandes */
+    align-items: center; /* Centra los enlaces verticalmente */
+}
+
+.nav2 {
+    display: flex;
+    flex-direction: row; /* Mantén la disposición en fila para pantallas grandes */
+    gap: 30px; /* Espacio entre los enlaces en pantallas grandes */
+    align-items: center; /* Centra los enlaces verticalmente */
 }
 
 .navlink {
     text-decoration: none;
     color: #c700d4;
-    font-size: 22px;
+    font-size: 22px; /* Tamaño de fuente para pantallas grandes */
     position: relative;
     padding-bottom: 20px;
     padding-top: 30px;
@@ -47,4 +57,39 @@
 .navlink:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* Consulta de medios para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column; /* Cambia a columna para móviles */
+        align-items: center; /* Centra el contenido horizontalmente */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Espacio entre el logo y los enlaces */
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column; /* Cambia a columna para móviles */
+        gap: 10px; /* Espacio entre los enlaces en móviles */
+        width: 100%;
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-top: 20px;
+    }
+
+    .nav:first-of-type {
+        order: 1; /* Asegura que el primer bloque de navegación se muestre primero en móviles */
+    }
+
+    .nav:last-of-type {
+        order: 2; /* Asegura que el segundo bloque de navegación se muestre después en móviles */
+    }
+
+    .navlink {
+        font-size: 18px; /* Tamaño de fuente más pequeño para móviles */
+        padding-bottom: 10px;
+        padding-top: 10px; /* Ajusta el padding para móviles */
+    }
 }

@@ -13,7 +13,7 @@ export const HeaderLogin = () => {
         Cáncer de Prostata
         </Link>
       </nav>
-      <nav className={styles.nav}>
+      <nav className={styles.nav2}>
         <Link href="/login/inicio" className={styles.navlink}>
           Home
         </Link>
