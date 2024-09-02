@@ -64,7 +64,7 @@ export default function Formulario() {
 
                 <button className={styles.button} type="submit">Login</button>
 
-                {errorMessage && <p style={{ color: 'red', marginTop: '2rem', marginBottom: '0', marginLeft:'4rem' }}>{errorMessage}</p>}
+                {errorMessage && <p className={styles.mensaje}>{errorMessage}</p>}
             </form>
         </div>
     );

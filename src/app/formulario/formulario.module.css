@@ -84,6 +84,13 @@
     border-color: #75007d;
 }
 
+.mensaje {
+    color: red; 
+    margin-top: 2rem; 
+    margin-bottom: 0; 
+    margin-left: 6rem;
+}
+
 /* Consulta de medios para pantallas más pequeñas */
 @media (max-width: 767px) {
 
@@ -128,6 +135,10 @@
 
     .button {
         width: 100%;
+    }
+
+    .mensaje {
+        margin-left: 5px;
     }
 }
 
