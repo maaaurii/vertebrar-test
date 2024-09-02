@@ -50,7 +50,7 @@ export default function CancerDeMama() {
             newImageContainer.style.marginTop = '20px';
 
             const containerStyle = isMobile 
-            ? `display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 100px; margin-left: 60px;`
+            ? `display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 100px; margin-left: 70px;`
             : `display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 100px;`;
 
             newImageContainer.innerHTML = `
@@ -63,7 +63,7 @@ export default function CancerDeMama() {
                         <img src="${imageDataUrl}" alt="Uploaded Image" style="max-width: 400px; max-height: 400px; border: 1px solid #ddd; border-radius: 4px;">
                         <button class="button download-image" style="padding: 12px 0; background-color: #136a02; width: 80px; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease;">Download</button>
                     </div>
-                    <div style="display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
+                    <div style="display: flex; flex-direction: column; width: 90%; box-sizing: border-box; margin-left:20px;">
                         <form class="image-form" style="display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
                             <div style="display: flex; align-items: center; margin-bottom: 10px;">
                                     <label for="ia-ki67" style="width: 180px; margin-right: 10px;">IA KI67:</label>
