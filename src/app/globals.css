@@ -2,8 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url("https://appx.digpatho.com/static/images/home_background.71f9d3b8877c.jpeg");
-    background-size: cover; /* Scale the background image to cover the entire container */
-    background-position: center center; /* Center the image horizontally and vertically */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
 }
 

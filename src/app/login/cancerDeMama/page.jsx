@@ -1,25 +1,30 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './cancerDeMama.module.css';
 
 
 export default function CancerDeMama() {
-    const [activeTab, setActiveTab] = useState('home-tab-pane');
-    const [imageDataUrl, setImageDataUrl] = useState('');
+    const [activeTab, setActiveTab] = useState('home-tab-pane'); // Estado para gestionar la pestaña activa
+    const [imageDataUrl, setImageDataUrl] = useState(''); // Estado para almacenar la URL de la imagen cargada
+
+     // Referencias para elementos del DOM
     const imageInputRef = useRef(null);
     const imageContainerRef = useRef(null);
     const newImageContainerRef = useRef(null);
 
+    // Función para manejar el clic en las pestañas
     const handleTabClick = (targetId) => {
         setActiveTab(targetId);
     };
 
+    // Función para manejar la carga del archivo de imagen
     const handleFileUpload = () => {
         imageInputRef.current.click();
     };
 
+    // Función para manejar el cambio en el input de archivo
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
@@ -32,14 +37,18 @@ export default function CancerDeMama() {
         }
     };
 
+    // Función para manejar la eliminación de la imagen
     const handleDeleteImage = () => {
         setImageDataUrl('');
         imageContainerRef.current.style.display = 'none';
         imageInputRef.current.value = '';
     };
 
+    // Función para manejar el clic en el botón de enviar
     const handleSendButtonClick = () => {
         if (imageDataUrl) {
+
+            // Crear un nuevo contenedor para la imagen cargada
             const newImageContainer = document.createElement('div');
             const isMobile = window.innerWidth <= 767;
 
@@ -122,11 +131,15 @@ export default function CancerDeMama() {
                 </div>
             `;
 
+            // Agregar el nuevo contenedor de imagen a la referencia y mostrarlo
             newImageContainerRef.current.appendChild(newImageContainer);
             newImageContainerRef.current.style.display = 'block';
 
+
+            // Limpiar el estado de la URL de la imagen
             setImageDataUrl('');
 
+            // Añadir un evento para descargar la imagen al hacer clic en el botón de descarga
             newImageContainer.querySelector('.download-image').addEventListener('click', (event) => {
                 const imgElement = event.target.previousElementSibling;
                 const link = document.createElement('a');
@@ -135,14 +148,12 @@ export default function CancerDeMama() {
                 link.click();
             });
 
+            // Añadir un evento para eliminar el contenedor de la imagen al hacer clic en el botón de eliminar
             newImageContainer.querySelector('.delete-result').addEventListener('click', () => {
                 newImageContainer.remove();
             });
 
-            newImageContainer.querySelector('.update-results').addEventListener('click', () => {
-                // Logic for updating results
-            });
-
+            // Ocultar el contenedor de la imagen original y limpiar el input de archivo
             imageContainerRef.current.style.display = 'none';
             imageInputRef.current.value = '';
         } else {
@@ -150,9 +161,7 @@ export default function CancerDeMama() {
         }
     };
 
-    useEffect(() => {
-        // Add any additional initialization logic here if needed
-    }, []);
+    
 
     return (
             <main className={styles.main}>

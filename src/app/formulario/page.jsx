@@ -1,39 +1,41 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './formulario.module.css';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import styles from './formulario.module.css'; 
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'; 
 
 export default function Formulario() {
-    const [showPassword, setShowPassword] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
+    const [showPassword, setShowPassword] = useState(false); // Estado para manejar la visibilidad de la contraseña
+    const [errorMessage, setErrorMessage] = useState(''); // Estado para almacenar el mensaje de error
 
     useEffect(() => {
-        // Use setTimeout to delay the alert
+        // Usamos setTimeout para retrasar la alerta
         const timer = setTimeout(() => {
-            alert('Usuario: candidate, Password: 123456');
-        }, 100); // 500 milliseconds delay to ensure the page is loaded
+            alert('Usuario: candidate, Password: 123456'); // Alerta con credenciales de ejemplo
+        }, 100); 
 
-        // Clean up the timer on component unmount
+        // Limpiamos el temporizador cuando el componente se desmonte
         return () => clearTimeout(timer);
-    }, []);
+    }, []); 
 
-
+    // Función para alternar la visibilidad de la contraseña
     const handlePasswordToggle = () => {
         setShowPassword(!showPassword);
     };
 
+    // Función para manejar el envío del formulario
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
 
-        const username = event.target.username.value;
-        const password = event.target.password.value;
+        const username = event.target.username.value; // Obtiene el valor del campo de usuario
+        const password = event.target.password.value; // Obtiene el valor del campo de contraseña
 
+        // Verifica si el usuario y la contraseña son correctos
         if (username === 'candidate' && password === '123456') {
-            window.location.href = '/login/cancerDeMama'; // Redirige al usuario
+            window.location.href = '/login/cancerDeMama'; // Redirige al usuario a la página de cancerDeMama
         } else {
-            setErrorMessage('Usuario o contraseña incorrectos.');
+            setErrorMessage('Usuario o contraseña incorrectos.'); // Muestra un mensaje de error si las credenciales son incorrectas
         }
     };
 
@@ -69,3 +71,4 @@ export default function Formulario() {
         </div>
     );
 }
+
